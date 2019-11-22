@@ -9,16 +9,16 @@ script:
   - docker run shubhangikumbhar/react-test npm test -- --coverage 
   
 after_success:
-  - docker build -t shubhangikumbhar/multi-client ./client
-  - docker build -t shubhangikumbhar/multi-nginx ./nginx
-  - docker build -t shubhangikumbhar/multi-server ./server
-  - docker build -t shubhangikumbhar/multi-worker ./worker
+  - docker build -t shubhangidocker1/multi-client ./client
+  - docker build -t shubhangidocker1/multi-nginx ./nginx
+  - docker build -t shubhangidocker1/multi-server ./server
+  - docker build -t shubhangidocker1/multi-worker ./worker
 #Login to docker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push shubhangikumbhar/multi-client 
-  - docker push shubhangikumbhar/multi-nginx
-  - docker push shubhangikumbhar/multi-server
-  - docker push shubhangikumbhar/multi-worker
+  - docker push shubhangidocker1/multi-client 
+  - docker push shubhangidocker1/multi-nginx
+  - docker push shubhangidocker1/multi-server
+  - docker push shubhangidocker1/multi-worker
 
 
 
